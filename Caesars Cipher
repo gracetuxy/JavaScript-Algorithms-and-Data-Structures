@@ -1,0 +1,9 @@
+function rot13(str) {
+  var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  return str.replace(/[A-Z]/g, letter => {
+    var orig = alpha.indexOf(letter) - 13
+    return orig < 0 ? alpha[alpha.length+orig] : alpha[orig];
+  });
+}
+
+rot13("SERR PBQR PNZC");
