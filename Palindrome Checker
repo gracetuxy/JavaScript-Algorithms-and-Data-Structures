@@ -1,0 +1,10 @@
+function palindrome(str) {
+  var clean = str.toLowerCase().match(/[a-z0-9]/gi);
+  return clean.every((elem,idx,arr) => {
+    return elem == arr[arr.length-1-idx];
+  });
+}
+
+
+
+palindrome("eye");
