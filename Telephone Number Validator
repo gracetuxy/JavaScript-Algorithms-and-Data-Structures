@@ -1,0 +1,14 @@
+function telephoneCheck(str) {
+  // ? means 0 or 1 of the character before it
+
+  // start with none or one '1' followed by none or one space
+  // then there's 3 numbers or 3 numbers in () e.g. (123)
+  // followed by either a '-', a space, or nothing
+  // followed by another 3 numbers
+  // followed by either a '-', a space, or nothing
+  // end with 4 numbers
+  return /^1?\s?(\d{3}|\(\d{3}\))[-\s]?\d{3}[-\s]?\d{4}$/.test
+  (str);
+}
+
+telephoneCheck("555-555-5555");
